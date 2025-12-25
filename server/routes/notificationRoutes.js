@@ -5,7 +5,7 @@ const {
   getSettings,
   saveSettings,
 } = require("../controllers/notificationController");
-const authMiddleware = require("../middlewares/auth");
+const authMiddleware = require("../middlewares/authMiddleware");
 
 router.get("/", authMiddleware, getSettings);
 router.post("/settings", authMiddleware, saveSettings);
